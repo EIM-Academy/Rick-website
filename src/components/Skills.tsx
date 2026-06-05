@@ -5,21 +5,21 @@ import { portfolioData } from '../data';
 const domainConfig: Record<string, { icon: React.ReactNode; accent: string; bg: string; border: string }> = {
   hardware: {
     icon: <Cpu size={20} />,
-    accent: 'text-blue-600',
-    bg: 'bg-blue-50',
-    border: 'border-blue-100',
+    accent: 'text-blue-600 dark:text-blue-400',
+    bg: 'bg-blue-50 dark:bg-blue-900/30',
+    border: 'border-blue-100 dark:border-blue-800',
   },
   software: {
     icon: <Code2 size={20} />,
-    accent: 'text-violet-600',
-    bg: 'bg-violet-50',
-    border: 'border-violet-100',
+    accent: 'text-violet-600 dark:text-violet-400',
+    bg: 'bg-violet-50 dark:bg-violet-900/30',
+    border: 'border-violet-100 dark:border-violet-800',
   },
   business: {
     icon: <Briefcase size={20} />,
-    accent: 'text-emerald-600',
-    bg: 'bg-emerald-50',
-    border: 'border-emerald-100',
+    accent: 'text-emerald-600 dark:text-emerald-400',
+    bg: 'bg-emerald-50 dark:bg-emerald-900/30',
+    border: 'border-emerald-100 dark:border-emerald-800',
   },
 };
 
@@ -27,12 +27,12 @@ export default function Skills() {
   const { skillDomains } = portfolioData;
 
   return (
-    <section id="skills" className="py-24 bg-slate-50 border-t border-slate-200">
+    <section id="skills" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
 
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4 tracking-tight">Skills & Training</h2>
-          <p className="text-lg text-slate-600 max-w-2xl">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Skills & Training</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
             Organized by domain — what I can build today, and what I'm actively developing.
           </p>
         </div>
@@ -47,13 +47,13 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: domainIdx * 0.12 }}
-                className="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col gap-5"
+                className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-7 flex flex-col gap-5"
               >
                 <div className="flex items-center gap-3">
                   <div className={`p-2.5 rounded-xl ${config.bg} ${config.accent}`}>
                     {config.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 font-display">{domain.name}</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white font-display">{domain.name}</h3>
                 </div>
 
                 <div className="flex flex-col gap-2.5">
@@ -66,9 +66,9 @@ export default function Skills() {
                       transition={{ duration: 0.35, delay: domainIdx * 0.12 + skillIdx * 0.07 }}
                       className={`flex items-center justify-between px-4 py-2.5 rounded-xl border ${config.bg} ${config.border}`}
                     >
-                      <span className="font-medium text-slate-800 text-sm">{skill.name}</span>
+                      <span className="font-medium text-slate-800 dark:text-slate-200 text-sm">{skill.name}</span>
                       {skill.level === 'training' && (
-                        <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
+                        <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-700">
                           Developing
                         </span>
                       )}
@@ -80,7 +80,7 @@ export default function Skills() {
           })}
         </div>
 
-        <p className="mt-8 text-sm text-slate-400 text-center">
+        <p className="mt-8 text-sm text-slate-400 dark:text-slate-500 text-center">
           To add a new skill, drop it into the right domain in <code className="font-mono">data.ts</code> — it shows up here automatically.
         </p>
 

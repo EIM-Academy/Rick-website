@@ -5,12 +5,12 @@ export default function Life() {
   const { lifeGallery } = portfolioData;
 
   return (
-    <section id="life" className="py-24 bg-white border-t border-slate-200">
+    <section id="life" className="py-24 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
 
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4 tracking-tight">Life</h2>
-          <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Life</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
             Beyond school and making, I'm also a golfer and a cyclist. Golf taught me patience and strategic thinking — the same qualities I bring to engineering problems. Cycling keeps me grounded, giving me space to think away from the workbench. These aren't just hobbies; they're part of how I stay sharp and clear-headed.
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function Life() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.12 }}
-              className="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-100 cursor-pointer"
+              className="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-slate-100 dark:bg-slate-700 cursor-pointer"
             >
               <img
                 src={item.imageUrl}

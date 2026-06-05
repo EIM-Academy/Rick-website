@@ -3,7 +3,7 @@ import { Project, BlogPost, GalleryItem, SkillDomain, JourneyEntry } from './typ
 export const portfolioData = {
   about: {
     name: "Rick Wang",
-    role: "Hardware Engineer · Tech-Business Thinker · Maker",
+    role: "Tech-Savvy Builder · Engineer · Maker",
     bio: "I'm a high school student passionate about building at the intersection of hardware engineering and business strategy. I design circuits, model enclosures, and think about how physical products create real-world value — from biomedical innovation to embedded systems. I believe the best builders are also strategic thinkers.",
     email: "rickwang327@gmail.com",
     location: "San Francisco, CA"
